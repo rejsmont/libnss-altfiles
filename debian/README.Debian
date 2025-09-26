@@ -1,6 +1,40 @@
 libnss-altfiles for Debian
 -------------------------
 
-<Possible notes regarding this package - if none, delete this file.>
+This NSS module allows reading user and group information from alternative
+files stored outside /etc. By default, it reads files from /lib.
 
- -- root <root@unknown>  Fri, 26 Sep 2025 20:36:04 +0000
+Configuration
+-------------
+
+To use this module, add "altfiles" to the appropriate lines in
+/etc/nsswitch.conf. For example:
+
+    passwd: files altfiles
+    group:  files altfiles
+    shadow: files altfiles
+    gshadow: files altfiles
+
+This configuration will:
+1. First try to read from /etc/passwd, /etc/group, etc.
+2. Then try to read from /lib/passwd, /lib/group, etc.
+
+The altfiles module supports all the same file types as the standard files
+module:
+- passwd (/lib/passwd)
+- group (/lib/group)
+- shadow (/lib/shadow)
+- gshadow (/lib/gshadow)
+- hosts (/lib/hosts)
+- networks (/lib/networks)
+- protocols (/lib/protocols)
+- services (/lib/services)
+- rpc (/lib/rpc)
+
+Security Considerations
+----------------------
+
+Note that files in /lib should have appropriate permissions to prevent
+unauthorized access to sensitive information like password hashes.
+
+ -- Radoslaw Kamil Ejsmont <radoslaw@ejsmont.net>  Fri, 26 Sep 2025 20:36:04 +0000

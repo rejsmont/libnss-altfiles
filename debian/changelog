@@ -1,5 +1,7 @@
-libnss-altfiles (2.39-1) UNRELEASED; urgency=medium
+libnss-altfiles (2.39-1) unstable; urgency=medium
 
-  * Initial release. (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+  * Initial Debian package release
+  * Sync with glibc 2.39
+  * Support for reading alternative NSS files from custom locations
 
- -- root <root@unknown>  Fri, 26 Sep 2025 20:36:04 +0000
+ -- Radoslaw Kamil Ejsmont <radoslaw@ejsmont.net>  Fri, 26 Sep 2025 20:36:04 +0000

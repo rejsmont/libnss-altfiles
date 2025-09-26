@@ -1,21 +1,29 @@
 Source: libnss-altfiles
-Section: unknown
+Section: libs
 Priority: optional
-Maintainer: root <root@unknown>
+Maintainer: Radoslaw Kamil Ejsmont <radoslaw@ejsmont.net>
 Rules-Requires-Root: no
 Build-Depends:
  debhelper-compat (= 13),
- autotools-dev,
 Standards-Version: 4.6.2
-Homepage: <insert the upstream URL, if relevant>
-#Vcs-Browser: https://salsa.debian.org/debian/libnss-altfiles
-#Vcs-Git: https://salsa.debian.org/debian/libnss-altfiles.git
+Homepage: https://github.com/aperezdc/nss-altfiles
+Vcs-Browser: https://github.com/rejsmont/libnss-altfiles
+Vcs-Git: https://github.com/rejsmont/libnss-altfiles.git
 
 Package: libnss-altfiles
 Architecture: any
-Multi-Arch: foreign
+Multi-Arch: same
 Depends:
  ${shlibs:Depends},
  ${misc:Depends},
-Description: <insert up to 60 chars description>
- <Insert long description, indented with spaces.>
+Description: NSS module for reading alternative passwd and group files
+ This NSS module can read user information from files in the same format as
+ /etc/passwd and /etc/group stored in an alternate location (/lib by default).
+ .
+ As of version 2.19.0, the module supports also files mimicking other files
+ from /etc, including /etc/rpc, /etc/protocols, /etc/hosts, /etc/networks,
+ /etc/services, /etc/shadow, and /etc/gshadow. Which file types are supported
+ can be selected at build time.
+ .
+ Essentially, it is a tweaked copy of the sources for the NSS files module
+ included with glibc2.
