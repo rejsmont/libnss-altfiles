@@ -1,0 +1,21 @@
+Source: libnss-altfiles
+Section: unknown
+Priority: optional
+Maintainer: root <root@unknown>
+Rules-Requires-Root: no
+Build-Depends:
+ debhelper-compat (= 13),
+ autotools-dev,
+Standards-Version: 4.6.2
+Homepage: <insert the upstream URL, if relevant>
+#Vcs-Browser: https://salsa.debian.org/debian/libnss-altfiles
+#Vcs-Git: https://salsa.debian.org/debian/libnss-altfiles.git
+
+Package: libnss-altfiles
+Architecture: any
+Multi-Arch: foreign
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+Description: <insert up to 60 chars description>
+ <Insert long description, indented with spaces.>

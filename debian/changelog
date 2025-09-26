@@ -1,0 +1,5 @@
+libnss-altfiles (2.39-1) UNRELEASED; urgency=medium
+
+  * Initial release. (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+
+ -- root <root@unknown>  Fri, 26 Sep 2025 20:36:04 +0000
